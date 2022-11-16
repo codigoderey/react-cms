@@ -1,15 +1,15 @@
-import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import type { NextRouter } from "next/router";
 
 const MainNavigation = () => {
-	const { pathname } = useRouter();
+	const { pathname }: NextRouter = useRouter();
 
-	const setActiveLink = (path) => {
+	const setActiveLink = (path: string): boolean => {
 		return pathname === path;
 	};
 
-	const user = true;
+	const user: boolean = true;
 
 	return (
 		<header className="w-full p-4">

@@ -1,7 +1,13 @@
 import React from "react";
 import Link from "next/link";
 
-const Link1 = ({ href, text, classes }) => {
+interface Link1Props {
+	href: string;
+	text: string;
+	classes: string;
+}
+
+const Link1 = ({ href, text, classes }: Link1Props) => {
 	return (
 		<Link className={classes} href={href}>
 			{text}
